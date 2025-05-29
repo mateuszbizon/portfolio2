@@ -31,3 +31,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+    .radial-gradient {
+        background: radial-gradient(circle,#4777C6 0%, #0082CA 50%, #008D9C 100%);
+    }
+
+    .heading1 {
+        @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold
+    }
+
+    .heading2 {
+        @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold
+    }
+
+    .bigger-text {
+        @apply text-xl md:text-2xl font-medium
+    }
+}
