@@ -23,6 +23,7 @@
   --color-secondary: var(--secondary);
   --color-primary: var(--primary);
   --spacing-section-padding: var(--section-padding);
+  --animate-aurora: aurora 60s linear infinite;
 }
 
 @layer base {
@@ -57,5 +58,19 @@
 
     .card {
         @apply shadow-xl shadow-foreground-2 rounded-2xl border-2 border-foreground-2 p-5
+    }
+}
+
+@keyframes aurora {
+    from {
+        background-position:
+        50% 50%,
+        50% 50%;
+    }
+    
+    to {
+        background-position:
+        350% 50%,
+        350% 50%;
     }
 }
