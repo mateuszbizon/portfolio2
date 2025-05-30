@@ -1,5 +1,9 @@
+"use client"
+
 import React from 'react'
 import Container from '../ui/container'
+import { AuroraBackground } from '../ui/aurora-background'
+import { Button } from '../ui/button'
 
 function AboutSection() {
   return (
@@ -34,6 +38,25 @@ function AboutSection() {
                         <p className='bg-primary p-2 rounded-lg min-w-1/2 self-end'>Rubik's cube</p>
                         <p className='bg-primary p-2 rounded-lg w-1/2'>Music</p>
                         <p className='bg-primary p-2 rounded-lg w-1/2 self-end'>Games</p>
+                    </div>
+                </div>
+            </div>
+
+            <div className='flex flex-col gap-5 md:grid grid-cols-3 grid-rows-2 md:h-[350px] mt-5'>
+                <div className='card flex flex-col justify-center'>
+                    <p className='text-lg text-center'>Tech enthusiast with love in development</p>
+                </div>
+                <div className='card p-0 row-span-full col-start-2 col-end-4'>
+                    <AuroraBackground className='h-full text-center p-5'>
+                        <p className='bigger-text'>I am currently improving my skills in Next.js and learing back-end stuff to become in future a full-stack developer</p>
+                    </AuroraBackground>
+                </div>
+                <div className='card radial-gradient space-y-2'>
+                    <p className='text-foreground-2 text-lg text-center'>Do you want to start working with me?</p>
+                    <div className='flex justify-center'>
+                        <Button>
+                            Copy my email
+                        </Button>
                     </div>
                 </div>
             </div>
