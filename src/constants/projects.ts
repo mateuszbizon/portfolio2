@@ -10,7 +10,12 @@ export const PROJECTS: Project[] = [
         imageAlt: "Social media web application",
         link: "https://social-media-three-zeta.vercel.app/",
         technologies: [
-            TECHNOLOGIES[0]
+            TECHNOLOGIES[0],
+            TECHNOLOGIES[2],
+            TECHNOLOGIES[5],
+            TECHNOLOGIES[7],
+            TECHNOLOGIES[8],
+            TECHNOLOGIES[6],
         ],
         isLive: true
     }
