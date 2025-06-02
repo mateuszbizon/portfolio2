@@ -4,6 +4,8 @@ import { ExternalLink, FileCode2 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../ui/button'
+import { PROJECTS } from '@/constants/projects'
+import ProjectCard from '../cards/ProjectCard'
 
 function ExperienceSection() {
   return (
@@ -34,24 +36,9 @@ function ExperienceSection() {
 
             <h2 className='heading2 text-center mb-10'>My projects</h2>
             <div className='grid md:grid-cols-2 gap-10'>
-                <div className='p-5 rounded-2xl space-y-5'>
-                    <figure className='aspect-video relative rounded-2xl overflow-hidden'>
-                        <Image src={"/social_media_app.png"} alt='Social media web application' fill />
-                    </figure>
-
-                    <div className='space-y-2'>
-                        <h3 className='bigger-text'>Matgram - Social Media App</h3>
-                        <p className='text-lg'>Web application for social media inspiring by Instagram with own idea</p>
-                    </div>
-
-                    <div className='flex items-center justify-between'>
-                        <Button variant={"link"} size={"link"} asChild>
-                            <Link href={"/"} className='text-lg font-medium text-white'>
-                                Check Live Site <ExternalLink className='size-5' />
-                            </Link>
-                        </Button>
-                    </div>
-                </div>
+                {PROJECTS.map(project => (
+                    <ProjectCard key={project.id} project={project} />
+                ))}
             </div>
         </Container>
     </section>
