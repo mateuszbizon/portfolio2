@@ -4,6 +4,7 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import { ExternalLink } from 'lucide-react'
 import { Project } from '@/types'
+import { AnimatedTooltip } from '../ui/animated-tooltip'
 
 type ProjectCardProps = {
     project: Project
@@ -22,6 +23,9 @@ function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <div className='flex items-center justify-between'>
+            <div className='flex'>
+                <AnimatedTooltip items={project.technologies} />
+            </div>
             <Button variant={"link"} size={"link"} asChild>
                 <Link href={project.link} className='text-lg font-medium text-white' target='_blank'>
                     {project.isLive ? "Check Live Site" : "Project Github"} <ExternalLink className='size-5' />
