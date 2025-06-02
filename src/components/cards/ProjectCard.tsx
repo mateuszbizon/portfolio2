@@ -13,7 +13,7 @@ type ProjectCardProps = {
 function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className='p-5 rounded-2xl space-y-5'>
-        <figure className='aspect-video relative rounded-2xl overflow-hidden'>
+        <figure className='aspect-video relative rounded-xl overflow-hidden'>
             <Image src={project.image} alt={project.imageAlt} fill />
         </figure>
 
@@ -22,7 +22,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             <p className='text-lg'>{project.description}</p>
         </div>
 
-        <div className='flex items-center justify-between'>
+        <div className='flex flex-col md:flex-row items-center justify-between gap-1'>
             <div className='flex'>
                 <AnimatedTooltip items={project.technologies} />
             </div>
