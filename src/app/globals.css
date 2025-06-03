@@ -59,6 +59,18 @@
     .card {
         @apply shadow-xl shadow-foreground-2 rounded-2xl border-2 border-foreground-2 p-5
     }
+
+    .tabs-container {
+        @apply bg-primary rounded-2xl text-white p-5
+    }
+
+    .tabs-header {
+        @apply text-lg md:text-xl lg:text-2xl font-medium mb-5
+    }
+
+    .tabs-grid {
+        @apply grid md:grid-cols-2 lg:grid-cols-3 gap-10
+    }
 }
 
 @keyframes aurora {
