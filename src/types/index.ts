@@ -14,3 +14,9 @@ export type Technology = {
     name: string;
     icon: string;
 }
+
+export type Skill = {
+    id: number
+    name: string
+    level: string
+}
