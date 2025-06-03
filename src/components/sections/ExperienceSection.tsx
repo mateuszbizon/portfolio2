@@ -4,7 +4,7 @@ import { ExternalLink, FileCode2 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '../ui/button'
-import { PROJECTS } from '@/constants/projects'
+import { CLIENT_PROJECTS, PROJECTS } from '@/constants/projects'
 import ProjectCard from '../cards/ProjectCard'
 
 function ExperienceSection() {
@@ -35,8 +35,15 @@ function ExperienceSection() {
             </div>
 
             <h2 className='heading2 text-center mb-10'>My projects</h2>
-            <div className='grid md:grid-cols-2 gap-10'>
+            <div className='grid md:grid-cols-2 gap-10 mb-20'>
                 {PROJECTS.map(project => (
+                    <ProjectCard key={project.id} project={project} />
+                ))}
+            </div>
+
+            <h2 className='heading2 text-center mb-10'>Projects I have done for clients</h2>
+            <div className='grid md:grid-cols-2 gap-10'>
+                {CLIENT_PROJECTS.map(project => (
                     <ProjectCard key={project.id} project={project} />
                 ))}
             </div>

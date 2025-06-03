@@ -66,3 +66,16 @@ export const PROJECTS: Project[] = [
         isLive: false
     },
 ]
+
+export const CLIENT_PROJECTS: Project[] = [
+    {
+        id: 1,
+        title: "Serwis Mobilny TIR Zgorzelec",
+        description: "Web site for mobile truck service in Zgorzelec",
+        image: "/serwis_mobilny_tir_app.png",
+        imageAlt: "Mobile truck service web site",
+        link: "https://serwismobilnytirzgorzelec.pl/",
+        technologies: [],
+        isLive: true
+    },
+]
