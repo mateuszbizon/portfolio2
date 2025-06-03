@@ -12,7 +12,7 @@ type ProjectCardProps = {
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className='p-5 rounded-2xl space-y-5'>
+    <div className='rounded-2xl space-y-5'>
         <figure className='aspect-video relative rounded-xl overflow-hidden'>
             <Image src={project.image} alt={project.imageAlt} fill />
         </figure>
