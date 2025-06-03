@@ -61,7 +61,7 @@
     }
 
     .tabs-container {
-        @apply bg-primary rounded-2xl text-white p-5
+        @apply bg-primary rounded-2xl text-white p-5 h-full overflow-auto md:overflow-visible
     }
 
     .tabs-header {
@@ -70,6 +70,14 @@
 
     .tabs-grid {
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-10
+    }
+}
+
+@layer utilities {
+    .no-visible-scrollbar {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
