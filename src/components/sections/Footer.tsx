@@ -2,8 +2,8 @@ import React from 'react'
 import Container from '../ui/container'
 import { Button } from '../ui/button'
 import Link from 'next/link'
-import { EMAIL } from '@/constants'
-import { Github, Linkedin, Send } from 'lucide-react'
+import { EMAIL, SOCIALS } from '@/constants'
+import { Send } from 'lucide-react'
 
 function Footer() {
   return (
@@ -22,16 +22,13 @@ function Footer() {
             <div className='flex flex-col md:flex-row md:justify-between items-center gap-5 mt-10'>
                 <p>{/*"©"*/} {new Date().getFullYear()} Mateusz Bizoń</p>
                 <div className='flex items-center gap-3 order-first md:order-none'>
-                    <Button size={"icon"} asChild>
-                        <Link href={"/"}>
-                            <Github />
-                        </Link>
-                    </Button>
-                    <Button size={"icon"} asChild>
-                        <Link href={"/"}>
-                            <Linkedin />
-                        </Link>
-                    </Button>
+                    {SOCIALS.map(social => (
+                        <Button key={social.name} size={"icon"} asChild>
+                            <Link href={social.link} target='_blank'>
+                                <social.icon />
+                            </Link>
+                        </Button>
+                    ))}
                 </div>
             </div>
         </Container>
