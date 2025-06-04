@@ -1,11 +1,25 @@
 "use client"
 
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '../ui/container'
 import { AuroraBackground } from '../ui/aurora-background'
 import { Button } from '../ui/button'
+import { EMAIL } from '@/constants'
+import { Check } from 'lucide-react'
 
 function AboutSection() {
+    const [copied, setCopied] = useState(false)
+
+    function handleCopy() {
+        if (copied) return
+
+        navigator.clipboard.writeText(EMAIL)
+        setCopied(true)
+        setTimeout(() => {
+            setCopied(false)
+        }, 3000)
+    }
+
   return (
     <section className='py-section-padding'>
         <Container>
@@ -54,8 +68,12 @@ function AboutSection() {
                 <div className='card radial-gradient space-y-2'>
                     <p className='text-foreground-2 text-lg text-center'>Do you want to start working with me?</p>
                     <div className='flex justify-center'>
-                        <Button>
-                            Copy my email
+                        <Button onClick={handleCopy}>
+                            {copied ? (
+                                <>
+                                    Copied! <Check />
+                                </>
+                            ) : 'Copy my email'}
                         </Button>
                     </div>
                 </div>
