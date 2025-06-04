@@ -61,7 +61,7 @@
     }
 
     .tabs-container {
-        @apply bg-primary rounded-2xl text-white p-5 h-full overflow-auto md:overflow-visible
+        @apply bg-primary rounded-2xl text-white p-5 h-full overflow-auto lg:overflow-visible
     }
 
     .tabs-header {
