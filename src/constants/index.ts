@@ -1,5 +1,5 @@
 import GithubIcon from '@/components/ui/icons/githubIcon'
-import { Github, Linkedin } from 'lucide-react'
+import LinkedinIcon from '@/components/ui/icons/linkedinIcon'
 
 export const EMAIL = "mateuszbizon2000@gmail.com"
 export const SOCIALS = [
@@ -11,6 +11,6 @@ export const SOCIALS = [
     {
         name: "LinkedIn",
         link: "https://www.linkedin.com/in/mateusz-bizo%C5%84-ab5672304/",
-        icon: Linkedin
+        icon: LinkedinIcon
     },
 ]
