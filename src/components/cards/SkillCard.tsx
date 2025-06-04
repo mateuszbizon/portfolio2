@@ -8,8 +8,8 @@ type SkillCardProps = {
 function SkillCard({ skill }: SkillCardProps) {
   return (
     <div className='space-y-2'>
-        <p className='text-lg font-medium'>{skill.name}</p>
-        <p className='text-muted'>{skill.level}</p>
+        <p className='text-lg font-semibold'>{skill.name}</p>
+        <p>{skill.level}</p>
     </div>
   )
 }

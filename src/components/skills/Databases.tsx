@@ -5,7 +5,7 @@ import { DATABASES } from '@/constants/skills'
 function Databases() {
   return (
     <div className='tabs-container'>
-        <p className='tabs-header'>Languages</p>
+        <p className='tabs-header'>Databases</p>
         <div className='tabs-grid'>
             {DATABASES.map((skill) => (
                 <SkillCard key={skill.id} skill={skill} />

@@ -5,7 +5,7 @@ import { OTHER_SKILLS } from '@/constants/skills'
 function OtherSkills() {
   return (
     <div className='tabs-container'>
-        <p className='tabs-header'>Languages</p>
+        <p className='tabs-header'>Other skills</p>
         <div className='tabs-grid'>
             {OTHER_SKILLS.map((skill) => (
                 <SkillCard key={skill.id} skill={skill} />

@@ -5,7 +5,7 @@ import { FRAMEWORKS } from '@/constants/skills'
 function Frameworks() {
   return (
     <div className='tabs-container'>
-        <p className='tabs-header'>Languages</p>
+        <p className='tabs-header'>Frameworks</p>
         <div className='tabs-grid'>
             {FRAMEWORKS.map((skill) => (
                 <SkillCard key={skill.id} skill={skill} />
