@@ -9,6 +9,7 @@ import { NAV_ITEMS } from '@/constants/navItems'
 import NavItemCard from '../cards/NavItemCard'
 import useScrollSpy from '@/lib/hooks/useScrollSpy'
 import NavSheet from './NavSheet'
+import Image from 'next/image'
 
 function Nav() {
     const { activeLink } = useScrollSpy({
@@ -17,8 +18,8 @@ function Nav() {
 
   return (
     <nav className='fixed top-0 w-full px-5 md:px-10 h-nav-height bg-background border-b flex items-center justify-between z-10'>
-        <div>
-            logo
+        <div className='relative size-10'>
+            <Image src={"/logo.jpg"} alt='Portfolio author' fill className='object-cover rounded-full' />
         </div>
 
         <ul className='hidden md:flex items-center'>
