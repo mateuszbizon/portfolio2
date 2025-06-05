@@ -8,6 +8,7 @@ import { AlignJustify, Send } from 'lucide-react'
 import { NAV_ITEMS } from '@/constants/navItems'
 import NavItemCard from '../cards/NavItemCard'
 import useScrollSpy from '@/lib/hooks/useScrollSpy'
+import NavSheet from './NavSheet'
 
 function Nav() {
     const { activeLink } = useScrollSpy({
@@ -34,9 +35,9 @@ function Nav() {
             </Link>
         </Button>
 
-        <Button className='md:hidden' size={"icon"}>
-            <AlignJustify />
-        </Button>
+        <div className='md:hidden'>
+            <NavSheet />
+        </div>
     </nav>
   )
 }
