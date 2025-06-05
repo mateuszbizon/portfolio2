@@ -20,3 +20,8 @@ export type Skill = {
     name: string
     level: string
 }
+
+export type NavItem = {
+    label: string;
+    link: string;
+}

@@ -3,6 +3,8 @@ import { Button } from '../ui/button'
 import Link from 'next/link'
 import { EMAIL } from '@/constants'
 import { AlignJustify, Send } from 'lucide-react'
+import { NAV_ITEMS } from '@/constants/navItems'
+import NavItemCard from '../cards/NavItemCard'
 
 function Nav() {
   return (
@@ -12,16 +14,11 @@ function Nav() {
         </div>
 
         <ul className='hidden md:flex items-center'>
-            <li>
-                <Button className='rounded-lg' size={"sm"} asChild>
-                    <Link href='#about'>About</Link>
-                </Button>
-            </li>
-            <li>
-                <Button className='rounded-lg' size={"sm"} asChild>
-                    <Link href='#about'>About</Link>
-                </Button>
-            </li>
+            {NAV_ITEMS.map(item => (
+                <li key={item.label}>
+                    <NavItemCard item={item} />
+                </li>
+            ))}
         </ul>
 
         <Button className='hidden md:inline-flex' asChild>
