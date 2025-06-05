@@ -7,7 +7,7 @@ import { Send } from 'lucide-react'
 
 function Footer() {
   return (
-    <footer className='bg-foreground text-foreground-2 pt-section-padding pb-10'>
+    <footer id='contact' className='bg-foreground text-foreground-2 pt-section-padding pb-10'>
         <Container>
             <div className='flex flex-col items-center gap-8'>
                 <h2 className='heading2 text-center'>Do <span className='text-primary'>you</span> have any questions?</h2>

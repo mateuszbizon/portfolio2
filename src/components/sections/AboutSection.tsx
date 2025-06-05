@@ -21,7 +21,7 @@ function AboutSection() {
     }
 
   return (
-    <section className='py-section-padding'>
+    <section id='about' className='py-section-padding'>
         <Container>
             <p className='section-name-text'>about me</p>
 

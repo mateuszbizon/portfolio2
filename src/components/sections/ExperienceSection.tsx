@@ -1,15 +1,12 @@
 import React from 'react'
 import Container from '../ui/container'
-import { ExternalLink, FileCode2 } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Button } from '../ui/button'
+import { FileCode2 } from 'lucide-react'
 import { CLIENT_PROJECTS, PROJECTS } from '@/constants/projects'
 import ProjectCard from '../cards/ProjectCard'
 
 function ExperienceSection() {
   return (
-    <section className='py-section-padding bg-[#CC6FAF] text-white rounded-t-3xl'>
+    <section id='experience' className='py-section-padding bg-[#CC6FAF] text-white rounded-t-3xl'>
         <Container>
             <p className='section-name-text'>experience</p>
             <h2 className='heading2 text-center mb-10'>Places where I worked as developer</h2>
