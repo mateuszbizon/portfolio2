@@ -11,6 +11,7 @@
   --destructive: #B85D4C;
   --border: #B0A8BA;
   --section-padding: 70px;
+  --nav-height: 60px;
 }
 
 @theme inline {
@@ -24,6 +25,7 @@
   --color-primary: var(--primary);
   --spacing-section-padding: var(--section-padding);
   --animate-aurora: aurora 60s linear infinite;
+  --spacing-nav-height: var(--nav-height);
 }
 
 @layer base {

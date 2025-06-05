@@ -1,3 +1,4 @@
+import Nav from "@/components/common/Nav";
 import AboutSection from "@/components/sections/AboutSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
 import Footer from "@/components/sections/Footer";
@@ -7,6 +8,7 @@ import SkillsSection from "@/components/sections/SkillsSection";
 export default function Home() {
   return (
     <main>
+        <Nav />
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
