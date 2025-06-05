@@ -24,4 +24,5 @@ export type Skill = {
 export type NavItem = {
     label: string;
     link: string;
+    section: string;
 }

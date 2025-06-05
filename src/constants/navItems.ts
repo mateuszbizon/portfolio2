@@ -1,18 +1,24 @@
-export const NAV_ITEMS = [
+import { NavItem } from "@/types";
+
+export const NAV_ITEMS: NavItem[] = [
     {
         label: "About",
-        link: "#about"
+        link: "#about",
+        section: "about"
     },
     {
         label: "Experience",
-        link: "#experience"
+        link: "#experience",
+        section: "experience"
     },
     {
         label: "Skills",
-        link: "#skills"
+        link: "#skills",
+        section: "skills"
     },
     {
         label: "Contact",
-        link: "#contact"
+        link: "#contact",
+        section: "contact"
     }
 ]
