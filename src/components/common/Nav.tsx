@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import { Button } from '../ui/button'
 import Link from 'next/link'
@@ -5,8 +7,13 @@ import { EMAIL } from '@/constants'
 import { AlignJustify, Send } from 'lucide-react'
 import { NAV_ITEMS } from '@/constants/navItems'
 import NavItemCard from '../cards/NavItemCard'
+import useScrollSpy from '@/lib/hooks/useScrollSpy'
 
 function Nav() {
+    const { activeLink } = useScrollSpy({
+        navItems: NAV_ITEMS
+    })
+
   return (
     <nav className='fixed top-0 w-full px-5 md:px-10 h-nav-height bg-background border-b flex items-center justify-between z-10'>
         <div>
@@ -16,7 +23,7 @@ function Nav() {
         <ul className='hidden md:flex items-center'>
             {NAV_ITEMS.map(item => (
                 <li key={item.label}>
-                    <NavItemCard item={item} />
+                    <NavItemCard item={item} activeLink={activeLink} />
                 </li>
             ))}
         </ul>
