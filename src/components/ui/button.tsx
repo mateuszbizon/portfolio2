@@ -16,6 +16,7 @@ const buttonVariants = cva(
         outline:
           "bg-transparent border-2 border-foreground hover:bg-foreground hover:text-white",
         link: "text-primary underline-offset-4 hover:underline hover:text-secondary",
+        transparent: "border-2 border-transparent text-foreground hover:text-foreground/50"
       },
       size: {
         default: "px-5 py-2",
