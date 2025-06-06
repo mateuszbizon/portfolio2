@@ -1,3 +1,4 @@
+import AskAI from "@/components/common/AskAI";
 import Nav from "@/components/common/Nav";
 import AboutSection from "@/components/sections/AboutSection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
@@ -14,6 +15,7 @@ export default function Home() {
         <ExperienceSection />
         <SkillsSection />
         <Footer />
+        <AskAI />
     </main>
   );
 }
