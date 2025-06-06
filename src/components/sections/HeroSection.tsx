@@ -3,6 +3,7 @@ import Container from '../ui/container'
 import { Button } from '../ui/button'
 import { TextGenerateEffect } from '../ui/text-generate-effect'
 import { Spotlight } from '../ui/spotlight'
+import Link from 'next/link'
 
 function HeroSection() {
     const headWords = "Hi! I'm Matthew, a Next.js Developer"
@@ -15,8 +16,10 @@ function HeroSection() {
                 <h1 className='text-white heading1'><TextGenerateEffect words={headWords} /></h1>
                 <p className='bigger-text text-foreground-2'>A front-end developer based in Poland</p>
                 <div>
-                    <Button size={"lg"}>
-                        Show my work
+                    <Button size={"lg"} asChild>
+                        <Link href={"#experience"}>
+                            Show my work
+                        </Link>
                     </Button>
                 </div>
             </div>
