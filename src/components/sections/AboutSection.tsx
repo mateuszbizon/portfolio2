@@ -49,9 +49,9 @@ function AboutSection() {
                         <p className='bigger-text'>Hobbys</p>
                     </div>
                     <div className='grow flex flex-col justify-center gap-5 text-sm text-white text-center'>
-                        <p className='bg-primary p-2 rounded-lg min-w-1/2 self-end'>Rubik's cube</p>
-                        <p className='bg-primary p-2 rounded-lg w-1/2'>Music</p>
-                        <p className='bg-primary p-2 rounded-lg w-1/2 self-end'>Games</p>
+                        <p className='bg-primary p-2 rounded-lg w-fit self-end'>Rubik's cube</p>
+                        <p className='bg-primary p-2 rounded-lg w-fit'>Music</p>
+                        <p className='bg-primary p-2 rounded-lg w-fit self-end'>Games</p>
                     </div>
                 </div>
             </div>
