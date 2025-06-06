@@ -11,6 +11,8 @@ type ProjectCardProps = {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
+    const emptyTechs = project.technologies.length < 1
+
   return (
     <div className='rounded-2xl space-y-5'>
         <figure className='aspect-video relative rounded-xl overflow-hidden'>
@@ -22,7 +24,7 @@ function ProjectCard({ project }: ProjectCardProps) {
             <p className='text-lg'>{project.description}</p>
         </div>
 
-        <div className='flex flex-col md:flex-row items-center justify-between gap-1'>
+        <div className={`flex flex-col ${emptyTechs ? "md:flex-row-reverse" : "md:flex-row"} items-center justify-between gap-1`}>
             <div className='flex'>
                 <AnimatedTooltip items={project.technologies} />
             </div>
