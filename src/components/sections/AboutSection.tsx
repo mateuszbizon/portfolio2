@@ -6,6 +6,7 @@ import { AuroraBackground } from '../ui/aurora-background'
 import { Button } from '../ui/button'
 import { EMAIL } from '@/constants'
 import { Check } from 'lucide-react'
+import { calculateCurrentAge } from '@/lib/utils'
 
 function AboutSection() {
     const [copied, setCopied] = useState(false)
@@ -37,7 +38,7 @@ function AboutSection() {
                     </div>
                     <div className='space-y-1'>
                         <p className='uppercase text-muted text-sm'>age</p>
-                        <p className='font-medium'>25</p>
+                        <p className='font-medium'>{calculateCurrentAge()}</p>
                     </div>
                     <div className='space-y-1'>
                         <p className='uppercase text-muted text-sm'>country</p>
