@@ -1,16 +1,23 @@
-import { streamText } from "ai"
-import { openai } from '@ai-sdk/openai';
+import { createOpenRouter } from '@openrouter/ai-sdk-provider'
+import { streamText } from 'ai'
 
-export const runtime = "edge"
+const openrouter = createOpenRouter({
+    apiKey: process.env.OPENAI_API_KEY,
+})
 
 export async function POST(req: Request) {
     const { messages } = await req.json()
 
-    const result = streamText({
-        model: openai("gpt-3.5-turbo"),
-        system: "Odpowiadaj jakbyś był właścicielem strony. Oto dane o sobie:\n Nazywam się Mateusz Bizon. Mam 25 lat",
-        messages
+    const response = streamText({
+        model: openrouter("openai/gpt-3.5-turbo"),
+        messages: [
+            {
+                role: "system",
+                content: "Odpowiadaj jakbyś był właścicielem strony. Oto dane o sobie: Nazywam się Mateusz Bizon. Mam 25 lat"
+            },
+            ...messages
+        ]
     })
 
-    return result.toDataStreamResponse()
+    return response.toDataStreamResponse()
 }
