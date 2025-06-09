@@ -1,3 +1,4 @@
+import { BIO } from '@/constants'
 import { createOpenRouter } from '@openrouter/ai-sdk-provider'
 import { streamText } from 'ai'
 
@@ -13,7 +14,7 @@ export async function POST(req: Request) {
         messages: [
             {
                 role: "system",
-                content: "Odpowiadaj jakbyś był właścicielem strony. Oto dane o sobie: Nazywam się Mateusz Bizon. Mam 25 lat"
+                content: `Answer as if you were the owner of the web site. Here are some details about yourself: ${BIO}`
             },
             ...messages
         ]
