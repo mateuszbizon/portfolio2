@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { KeyboardEvent } from 'react'
 import { useChat } from "@ai-sdk/react"
 import { Button } from '../ui/button'
 import { Send } from 'lucide-react'
@@ -14,6 +14,16 @@ function AskAIChat({ isChatOpen }: AskAIChatProps) {
     const { messages, input, handleInputChange, handleSubmit } = useChat({
         api: "/api/ask-ai"
     })
+
+    function onValueChange(e: KeyboardEvent<HTMLTextAreaElement>) {
+        if (e.key === "Enter" && !e.shiftKey) {
+            e.preventDefault()
+            
+            if (input.trim() !== "") {
+                handleSubmit()
+            }
+        }
+    }
 
   return (
     <div className={`fixed bottom-24 right-5 flex flex-col ${isChatOpen ? "w-[280px] sm:w-[600px] h-[350px] sm:h-[400px]" : "size-0 pointer-events-none"} rounded-2xl border-2 bg-background overflow-hidden transition-all duration-300`}>
@@ -30,8 +40,8 @@ function AskAIChat({ isChatOpen }: AskAIChatProps) {
         <div className='mt-auto'>
             <form onSubmit={handleSubmit}>
                 <div className='relative'>
-                    <Textarea value={input} onChange={handleInputChange} className='resize-none pr-11' placeholder='Ask about anything'></Textarea>
-                    <Button type='submit' size={"icon"} className='absolute top-1/2 right-2 -translate-y-1/2' disabled={input === ""}><Send /></Button>
+                    <Textarea value={input} onKeyDown={onValueChange} onChange={handleInputChange} className='resize-none pr-11' placeholder='Ask about anything'></Textarea>
+                    <Button type='submit' size={"icon"} className='absolute top-1/2 right-2 -translate-y-1/2' disabled={input.trim() === ""}><Send /></Button>
                 </div>
             </form>
         </div>
