@@ -2,6 +2,9 @@
 
 import React from 'react'
 import { useChat } from "@ai-sdk/react"
+import { Button } from '../ui/button'
+import { Send } from 'lucide-react'
+import { Textarea } from '../ui/textarea'
 
 type AskAIChatProps = {
     isChatOpen: boolean
@@ -26,8 +29,10 @@ function AskAIChat({ isChatOpen }: AskAIChatProps) {
         </div>
         <div className='mt-auto'>
             <form onSubmit={handleSubmit}>
-                <textarea value={input} onChange={handleInputChange} className='resize-none'></textarea>
-                <button type='submit' className='border'>send</button>
+                <div className='relative'>
+                    <Textarea value={input} onChange={handleInputChange} className='resize-none pr-11' placeholder='Ask about anything'></Textarea>
+                    <Button type='submit' size={"icon"} className='absolute top-1/2 right-2 -translate-y-1/2' disabled={input === ""}><Send /></Button>
+                </div>
             </form>
         </div>
     </div>
