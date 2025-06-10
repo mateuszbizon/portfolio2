@@ -26,6 +26,7 @@
   --spacing-section-padding: var(--section-padding);
   --animate-aurora: aurora 60s linear infinite;
   --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  --animate-dotsFlashing: dotsFlashing 2s linear infinite;
   --spacing-nav-height: var(--nav-height);
 }
 
@@ -79,6 +80,10 @@
     .tabs-grid {
         @apply grid md:grid-cols-2 lg:grid-cols-3 gap-10
     }
+
+    .dot-loading {
+        @apply size-3 rounded-full bg-primary animate-dotsFlashing
+    }
 }
 
 @layer utilities {
@@ -112,4 +117,18 @@
     opacity: 1;
     transform: translate(-50%, -40%) scale(1);
   }
+}
+
+@keyframes dotsFlashing {
+    0% {
+        opacity: 100%
+    }
+
+    50% {
+        opacity: 50%
+    }
+
+    100% {
+        opacity: 10%;
+    }
 }
