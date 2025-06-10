@@ -11,7 +11,7 @@ type AskAIChatProps = {
 }
 
 function AskAIChat({ isChatOpen }: AskAIChatProps) {
-    const { messages, input, handleInputChange, handleSubmit } = useChat({
+    const { messages, input, handleInputChange, handleSubmit, status } = useChat({
         api: "/api/ask-ai"
     })
     const chatContainerRef = useRef<HTMLDivElement>(null)
@@ -49,12 +49,15 @@ function AskAIChat({ isChatOpen }: AskAIChatProps) {
                     <p>{message.content}</p>
                 </div>
             ))}
+            {status === "submitted" && (
+                <p>Loading...</p>
+            )}
         </div>
         <div className='mt-auto'>
             <form onSubmit={handleSubmit}>
                 <div className='relative'>
                     <Textarea value={input} onKeyDown={onValueChange} onChange={handleInputChange} className='resize-none pr-11' placeholder='Ask about anything'></Textarea>
-                    <Button type='submit' size={"icon"} className='absolute top-1/2 right-2 -translate-y-1/2' disabled={input.trim() === ""}><Send /></Button>
+                    <Button type='submit' size={"icon"} className='absolute top-1/2 right-2 -translate-y-1/2' disabled={input.trim() === "" || status === "submitted"}><Send /></Button>
                 </div>
             </form>
         </div>
