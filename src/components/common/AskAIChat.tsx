@@ -5,6 +5,7 @@ import { useChat, } from "@ai-sdk/react"
 import { Button } from '../ui/button'
 import { Send } from 'lucide-react'
 import { Textarea } from '../ui/textarea'
+import DotsLoading from '../ui/dotsLoading'
 
 type AskAIChatProps = {
     isChatOpen: boolean
@@ -50,7 +51,7 @@ function AskAIChat({ isChatOpen }: AskAIChatProps) {
                 </div>
             ))}
             {status === "submitted" && (
-                <p>Loading...</p>
+                <DotsLoading className='w-fit' />
             )}
         </div>
         <div className='mt-auto'>
