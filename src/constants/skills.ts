@@ -115,16 +115,26 @@ export const OTHER_SKILLS: Skill[] = [
     },
     {
         id: 4,
+        name: "SEO",
+        level: "Advanced"
+    },
+    {
+        id: 5,
+        name: "Webflow",
+        level: "Solid"
+    },
+    {
+        id: 6,
         name: "Team work",
         level: "1 year experience"
     },
     {
-        id: 5,
+        id: 7,
         name: "Problem solving",
         level: ""
     },
     {
-        id: 6,
+        id: 8,
         name: "Analytical thinking",
         level: ""
     },
