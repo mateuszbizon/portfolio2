@@ -46,6 +46,11 @@ export const FRAMEWORKS: Skill[] = [
     },
     {
         id: 4,
+        name: "Bootstrap",
+        level: "Solid"
+    },
+    {
+        id: 5,
         name: "Express.js",
         level: "Basic"
     },
